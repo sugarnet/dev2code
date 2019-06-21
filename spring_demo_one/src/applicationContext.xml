@@ -6,9 +6,14 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean id="myFortune"
+   		class="com.luv2code.springdemo.HappyFortuneService">
+    </bean>
 
  	<bean id="myCoach"
- 		class="com.luv2code.springdemo.TennisCoach">	 		
+ 		class="com.luv2code.springdemo.TennisCoach">
+ 		<constructor-arg ref="myFortune" />	 		
  	</bean>
 
     <!--
