@@ -16,11 +16,10 @@
  		<constructor-arg ref="myFortune" />	 		
  	</bean>
 
-    <!--
-    <bean id="myCoach"
-        class="com.luv2code.springdemo.TennisCoach">         
+    <bean id="myCricketCoach"
+        class="com.luv2code.springdemo.CricketCoach">
+        <property name="fortuneService" ref="myFortune"></property>         
     </bean>
-    -->
 
 </beans>
 
