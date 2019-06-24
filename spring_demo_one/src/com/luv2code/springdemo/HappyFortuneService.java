@@ -4,8 +4,7 @@ public class HappyFortuneService implements FortuneService {
 
 	@Override
 	public String getFortune() {
-		// TODO Auto-generated method stub
-		return "Hoy es tu dÃ­a de suerte!!!";
+		return "Hoy es tu día de suerte!!!";
 	}
 
 }
