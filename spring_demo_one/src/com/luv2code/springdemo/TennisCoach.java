@@ -37,4 +37,12 @@ public class TennisCoach implements Coach {
 		this.team = team;
 	}
 	
+	public void hacerAlInicio() {
+		System.out.println("Desde hacerAlInicio()");
+	}
+	
+	public void hacerAlFinal() {
+		System.out.println("Desde hacerAlFinal()");
+	}
+	
 }

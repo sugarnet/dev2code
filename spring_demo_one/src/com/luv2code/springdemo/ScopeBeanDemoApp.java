@@ -6,18 +6,11 @@ public class ScopeBeanDemoApp {
 
 	public static void main(String[] args) {
 
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanScope-applicationContext.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beanLifeCycle-applicationContext.xml");
 		
-		Coach theCoach = context.getBean("myCoach", TennisCoach.class);
+		Coach theCoach = context.getBean("myCoach", Coach.class);
 		
-		Coach otherCoach = context.getBean("myCoach", TennisCoach.class);
-		
-		boolean result = (theCoach == otherCoach);
-		
-		System.out.println("Are the same reference? " + result);
-		
-		System.out.println("\ntheCoach: " + theCoach);
-		System.out.println("otherCoach: " + otherCoach);
+		System.out.println(theCoach.getDailyWorkout());
 		
 		context.close();
 	}
