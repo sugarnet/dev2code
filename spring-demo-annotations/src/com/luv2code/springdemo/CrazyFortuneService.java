@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -42,6 +41,7 @@ public class CrazyFortuneService implements FortuneService {
 				read = bufferedReader.readLine();
 			}
 			this.messages = messages.toArray(new String[messages.size()]);
+			bufferedReader.close();
 			
 		} catch (FileNotFoundException fnfe) {
 			fnfe.printStackTrace();
