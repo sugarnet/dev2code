@@ -1,12 +1,16 @@
 package com.luv2code.springdemo;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
+@Scope("singleton")
+// @Scope("prototype")
 public class TennisCoach implements Coach {
 	
 	@Autowired
@@ -49,4 +53,13 @@ public class TennisCoach implements Coach {
 	}
 	*/
 
+	@PostConstruct
+	public void doPostConstructor() {
+		System.out.println("TennisCoach -> doPostConstructor...");
+	}
+	
+	@PreDestroy
+	public void doPreDestroy() {
+		System.out.println("TennisCoach -> doBeforeDestroy...");
+	}
 }

@@ -10,6 +10,7 @@ public class AnnotationBeanScopeDemoApp {
 		
 		Coach theCoach = context.getBean("tennisCoach", Coach.class);
 		
+		/*
 		Coach alphaCoach = context.getBean("tennisCoach", Coach.class);
 		
 		boolean areTheSame = ( theCoach == alphaCoach );
@@ -19,6 +20,11 @@ public class AnnotationBeanScopeDemoApp {
 		System.out.println("Reference theCoach: " + theCoach);
 		
 		System.out.println("Reference alphaCoach: " + alphaCoach);
+		*/
+		
+		System.out.println(theCoach.getDailyWorkout());
+		
+		System.out.println(theCoach.getDailyFortune());
 		
 		context.close();
 	}

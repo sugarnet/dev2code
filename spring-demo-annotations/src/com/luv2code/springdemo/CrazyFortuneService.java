@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.stereotype.Component;
 
 
@@ -17,7 +20,7 @@ public class CrazyFortuneService implements FortuneService {
 	private String messages[];
 	
 	public CrazyFortuneService() {
-		this.loadMessagesFromFile();
+		
 	}
 	
 	@Override
@@ -26,6 +29,17 @@ public class CrazyFortuneService implements FortuneService {
 		Random random = new Random();
 		return this.messages[random.nextInt(this.messages.length)];
 
+	}
+	
+	@PostConstruct
+	public void doPostConstruct() {
+		System.out.println("CrazyFortuneService -> doPostConstruct...");
+		this.loadMessagesFromFile();
+	}
+	
+	@PreDestroy
+	public void doPreDestroy() {
+		System.out.println("CrazyFortuneService -> doPreDestroy...");
 	}
 	
 	private void loadMessagesFromFile() {
