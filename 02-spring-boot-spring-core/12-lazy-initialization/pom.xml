@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.dss</groupId>
-	<artifactId>07-construction-injection</artifactId>
+	<artifactId>12-lazy-initialization</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>07-construction-injection</name>
+	<name>12-lazy-initialization</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
